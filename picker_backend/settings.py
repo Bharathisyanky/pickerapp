@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "products",
+    "website",
+
 ]
 
 MIDDLEWARE = [
@@ -79,8 +82,8 @@ DATABASES = {
         "NAME": "yankyway",
         "USER": "postgres",
         "PASSWORD": "123",
-        "PORT": "localhost",
-        "HOST": "5432",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
