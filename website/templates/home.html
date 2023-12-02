@@ -7,7 +7,7 @@
 {% if user.is_authenticated %}
 
 
-<table class="table table-striped table-hover table-bordered">
+<table class="table table-striped table-sm table-hover table-bordered">
   <thead class="table-dark">
     <tr>
       <th scope="col">Name</th>
@@ -50,24 +50,33 @@
 
 {% else %}
 
+{% csrf_token %}
+
 <div class="col-md-6 offset-md-3">
-<h1>Login</h1>
-<br/>
-
-<form method="POST" action="{% url 'home' %}">
-	{% csrf_token %}
-
-  <div class="mb-3">
-    <input type="text" class="form-control" name="username", placeholder="Username" required>
-    
-  </div><br/>
-  <div class="mb-3">
-    <input type="password" class="form-control" name="password", placeholder="Password" required>
+  <h1 class="text-center">Welcome to Yanky..!</h1>
+  <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
+    <h2>Login to Your Account</h2>
+    <p>If you are new to Yanky, <a href="{% url 'register' %}" class="btn btn-link">Register Here</a></p>
   </div>
-  <br/>
-  <button type="submit" class="btn btn-secondary">Login</button>
 
-</form>
+  <form method="POST" action="{% url 'home' %}">
+    {% csrf_token %}
+
+    <div class="mb-3">
+      <input type="text" class="form-control" name="username" placeholder="Username" required>
+    </div>
+    <br/>
+    <div class="mb-3">
+      <input type="password" class="form-control" name="password" placeholder="Password" required>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <button type="submit" class="btn btn-secondary btn-block">Login</button>
+      </div>
+    </div>
+  </form>
+</div>
 
 
 

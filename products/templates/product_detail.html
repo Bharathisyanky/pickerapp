@@ -1,0 +1,37 @@
+<!-- products/templates/products/product_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }} - Product Detail</title>
+</head>
+<body>
+
+<h1>{{ product.name }} - Product Detail</h1>
+
+<p><strong>Description:</strong> {{ product.description }}</p>
+<p><strong>Price:</strong> ${{ product.price }}</p>
+<p><strong>Stock Quantity:</strong> {{ product.stock_quantity }}</p>
+
+{% if product.is_available %}
+    <p><strong>Status:</strong> Available</p>
+{% else %}
+    <p><strong>Status:</strong> Out of Stock</p>
+{% endif %}
+
+{% if product.rating %}
+    <p><strong>Rating:</strong> {{ product.rating }}</p>
+{% endif %}
+
+{% if product.reviews_count %}
+    <p><strong>Reviews Count:</strong> {{ product.reviews_count }}</p>
+{% endif %}
+
+<!-- Add more details as needed -->
+
+<a href="{% url 'list_products' %}">Back to Product List</a>
+
+</body>
+</html>

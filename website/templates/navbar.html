@@ -1,9 +1,50 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #032734; height: 75px;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'home' %}">Django CRM</a>
+    <a class="navbar-brand ms-3" href="{% url 'home' %}"><strong><h3>Yanky     </h3></strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <form class="d-flex" role="search" onsubmit="return submitSearchForm(event);">
+      <div class="input-group" >
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder=""
+          style="background-color: #2e4d57; width: 750px; height: 45px; color: white;"
+          id="searchInput"
+        />
+      </div>
+      
+    </form>
+    <script>
+      function submitSearchForm(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+    
+        // Perform any additional actions if needed
+    
+        // Example: Access the search input value
+        var searchInputValue = document.getElementById('searchInput').value;
+        console.log('Search input value:', searchInputValue);
+    
+        // You can add further logic here based on the search input value
+    
+        return false; // Ensure the form does not submit
+      }
+    
+      // Add an event listener to detect Enter key press
+      document.getElementById('searchInput').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+          submitSearchForm(e);
+        }
+      });
+    </script>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         
@@ -26,7 +67,56 @@
         
         
       </ul>
-      
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">📍 Enter Delivery Address</a>
+        </li>
+        
+      </ul>
+
+
+      <!-- New buttons for Login and Basket -->
+      <div class="d-flex">
+        <a class="btn btn-outline-light me-2" href="{% url 'home' %}" style = 'width: 100px;'>Basket</a>
+        <a class="btn btn-outline-light me-2" href="{% url 'home' %}" style = 'width: 100px;'>Login</a>
+        
+      </div>
+    
     </div>
   </div>
 </nav>
+
+<div class="ribbon-container">
+  <div class="ribbon">
+    <nav class="nav nav-pills flex-nowrap custom-pills ">
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <li class="text-sm lg:text-base mx-1 hover:text-primary first:pl-0 first:ml-0 inline-block h-auto p-0" id="nav-Q21zQ2F0ZWdvcnk6MQ=="><a class="nav-link active" href="/category/Q21zQ2F0ZWdvcnk6MQ==">New In</a></li>
+      <var>
+      </var>      <!-- Add more pills as needed -->
+    </nav>
+  </div>
+</div>
