@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "products",
     "website",
     "core",
-    "accounts",
+    "authentication",
     "categories",
     "orders",
     "cart",
@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     "media",
     "logs",
     "deployment",
+    "home",
 
 ]
 
@@ -80,7 +81,7 @@ ROOT_URLCONF = "picker_backend.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ['/Users/BharathReddy/dev/picker_backend/templates/'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -140,7 +141,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'website/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/assets')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

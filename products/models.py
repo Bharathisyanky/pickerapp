@@ -27,8 +27,8 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock_quantity = models.PositiveIntegerField()
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    #category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    #brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
     is_featured = models.BooleanField(default=False)
     is_available = models.BooleanField(default=True)
     rating = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)
@@ -44,7 +44,7 @@ class Product(models.Model):
     color = models.CharField(max_length=50, null=True, blank=True)
     material = models.CharField(max_length=50, null=True, blank=True)
     specifications = models.TextField(null=True, blank=True)
-    featured_image = models.ImageField(upload_to='product_images/', null=True, blank=True)
+    #featured_image = models.ImageField(upload_to='product_images/', null=True, blank=True)
 
     def __str__(self):
         return self.name
