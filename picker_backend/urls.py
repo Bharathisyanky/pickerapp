@@ -27,5 +27,7 @@ urlpatterns = [
 
     # Leave `Home.Urls` as last the last line
     path("", include("home.urls")),
+
+    path('products/', include('products.urls')),
     
 ]
