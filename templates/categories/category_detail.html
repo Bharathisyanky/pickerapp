@@ -1,0 +1,10 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Category Detail {% endblock %}
+
+{% block content %}
+  <h2>Category Detail</h2>
+  <p>Name: {{ category.name }}</p>
+  <p>Description: {{ category.description }}</p>
+  <a href="{% url 'category_list' %}">Back to Categories</a>
+{% endblock %}

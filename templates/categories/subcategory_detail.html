@@ -1,0 +1,27 @@
+{% block title %} Subcategory Detail {% endblock %}
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-6 col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Subcategory Detail</h4>
+          </div>
+          <div class="card-body">
+            <p><strong>Name:</strong> {{ subcategory.name }}</p>
+            <p><strong>Description:</strong> {{ subcategory.description }}</p>
+            <p><strong>Categories:</strong>
+              {% for category in subcategory.categories.all %}
+                {{ category.name }}{% if not forloop.last %}, {% endif %}
+              {% endfor %}
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="{% url 'subcategory_list' %}">Back to Subcategories</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

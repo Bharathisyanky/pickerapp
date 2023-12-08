@@ -6,7 +6,10 @@ Copyright (c) 2019 - present AppSeed.us
 # Create your views here.
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.views import LoginView, PasswordResetView, PasswordChangeView, PasswordResetConfirmView
+from admin_soft.forms import RegistrationForm, LoginForm, UserPasswordResetForm, UserSetPasswordForm, UserPasswordChangeForm
 from .forms import LoginForm, SignUpForm
+from django.contrib.auth import logout
 
 
 def login_view(request):
@@ -54,3 +57,20 @@ def register_user(request):
         form = SignUpForm()
 
     return render(request, "accounts/register.html", {"form": form, "msg": msg, "success": success})
+
+def logout_view(request):
+  logout(request)
+  return redirect('login/')
+
+
+class UserPasswordResetView(PasswordResetView):
+  template_name = 'password_reset.html'
+  form_class = UserPasswordResetForm
+
+class UserPasswordResetConfirmView(PasswordResetConfirmView):
+  template_name = 'password_reset_confirm.html'
+  form_class = UserSetPasswordForm
+
+class UserPasswordChangeView(PasswordChangeView):
+  template_name = 'password_change.html'
+  form_class = UserPasswordChangeForm
